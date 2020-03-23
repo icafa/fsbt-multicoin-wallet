@@ -1,0 +1,49 @@
+<ul id="dropdown1" class="dropdown-content">
+    <li>
+      <a routerLink="/profile">Profile</a>
+    </li>
+  </ul>
+  <nav>
+    <div class="nav-wrapper">
+      <a routerLink="/dashboard" class="brand-logo">
+        <!-- <img src="/assets/images/star.png" width="20"> -->
+        <!-- <img src="/assets/images/logo.png" width="200"> -->
+        FasBit
+      </a>
+      <a data-activates="mobile-demo" class="button-collapse">
+        <i class="material-icons">menu</i>
+      </a>
+      <ul class="right hide-on-med-and-down">
+        <li>
+          <a routerLink="/dashboard">Home</a>
+        </li>
+        <li>
+          <a routerLink="/transaction">Activity</a>
+        </li>
+        <li>
+          <a routerLink="/send">Send</a>
+        </li>
+        <li>
+          <a routerLink="/receive">Receive</a>
+        </li>
+        <li>
+          <a class="dropdown-button" href="javascript:void(0)" data-activates="dropdown2">
+            <!-- <img src="/assets/images/user.jpg" width="30" class="circle nav-user-circle"> -->
+            {{user.name}}
+          </a>
+          <ul id="dropdown2" class="dropdown-content">            
+            <i class="material-icons right">arrow_drop_down</i>
+
+            <li>
+              <a routerLink="/profile">Profile</a>
+            </li>
+            <li>
+              <a (click)="logout()">Log Out</a>
+      <!--mobile-navbar-->
+              <ul class="side-nav left-align" id="mobile-demo"></ul>
+            </li> 
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </nav>
